@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body {
+            background: rgba(2, 3, 3, 0.603);
+            color:blanchedalmond;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iiniciando estudos DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JS</p>
+    <div  id="msg">Clique em mim</div>
+    <script>
+        var corpo = window.document.body
+       var p1 =  window.document.getElementsByTagName('p')[1]// esse 1 no final é usado para escolher qual elemento voce quer, é uma das formas de escolher um elemento dentro do html
+       corpo.style.background = 'black'
+       p1.style.color = 'blue'
+       window.alert(p1.innerText) // innerText é usado para copiar o texto mas ele copia sem nenhuma formatação, tipo se tiver o <strong> ele nao puxa
+       window.document.write(p1.innerHTML) // innerHTML puxa a string certinha, se tiver <strong> e etc, ele puxa normalmente
+
+        // Outra forma de escolher os elementos do html é o ID, com a tag getElementByld(e aqui dentro vai o id)
+
+        // Outra forma é o nome dele, que usamos a tag getElementsByName()
+
+        var d = window.document.getElementById('msg')
+        d.style.background = 'green' 
+
+
+
+
+    </script>
+</body>
+</html>

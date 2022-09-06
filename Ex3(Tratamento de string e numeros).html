@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        font:  normal 20pt Arial;
+        background-color: aquamarine;  
+    }
+</style>
+<body>
+    <script>
+        var nome = window.prompt('Qual é o seu nome?')
+            document.write('Olá, '  + nome + ' seu nome tem ' + nome.length + ' letras<br/>') // contando letras em uma string
+            document.write('Seu nome em letras maisculas fica: ' + nome.toUpperCase() + '<br/>')
+            document.write('Seu nome em letras minusculas fica: ' + nome.toLowerCase())
+            var numero = window.prompt('Digite um número qualquer')
+            document.write('Este numero com duas casas decimais: ' + numero.tofixed(2) + '<br/>')
+            document.write('Este numero com duas casas decimais: ' + numero.tofixed(2).replace('.',',') + '<br/>')
+            // comando para digitar algo no valor monetario brasileiro, logo abaixo:
+            // numero.tolocalString('pt-BR', {style: 'currency', currency: 'BRL'})
+            
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+    <style>
+     div#resultado {
+         margin-top: 20px;
+         color: red;
+     }
+    </style>
+</head>
+<body>
+    <h1>Sistema de multas</h1>
+    <input type="number" name="txtvel" id="txtvel"> <Km>
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="resultado"></div>
+    <script>
+        function calcular(){
+        var txtv = window.document.getElementById('txtvel')
+        var vel = Number(txtv.value)
+        var resultado = window.document.getElementById('resultado')
+        resultado.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}Km/h</strong></p>`
+        if (vel > 60) {
+           resultado.innerHTML += 'Voce foi multado!!' // eu uso += para não apagar a msg anterior
+        } else {
+            resultado.innerHTML += 'Boa viagem, sempre dirija com cuidado!'
+        }
+    }
+    </script>
+</body>
+</html>

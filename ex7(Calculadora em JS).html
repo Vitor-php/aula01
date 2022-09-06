@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Numeros</title>
+    <style>
+        body {
+            font: normal 18pt Arial;
+            color: burlywood;
+        }
+        input {
+            font: normal 18pt Arial;
+            width: 130px;
+            color: red;
+        }
+        div#resultado {
+            margin-top: 20px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+ <h1> Somando Valores</h1>
+ <input type="number" name="txtn1" id="txtn1"> 
+ <input type="number" name="txtn2" id="txtn2">  
+ <input type="button" value="Somar" onclick="somar()">
+ <input type="button" value="Subtrair" onclick="subtrair()">
+ <input type="button" value="Multiplicar" onclick="multiplicar()">
+ <input type="button" value="Dividir" onclick="dividir()"> 
+ <div id="resultado">O resultado aparecerá aqui...</div>
+
+ <script>
+     // Função de soma
+     function somar() {
+         var tn1 = window.document.getElementById('txtn1') // os dois tipos funcionam da mesma forma, esse linka pelo id
+         var tn2 = window.document.querySelector('input#txtn2') // esse linka via 'css', digamos assim.
+         var res = window.document.getElementById('resultado')
+         var n1 = Number(tn1.value)
+         var n2 = Number(tn2.value)
+         var s = n1 + n2
+         res.innerHTML = 'A soma entre ' + n1 + ' e ' + n2 + ' é igual a ' + s
+     }
+      // Função de Subtração
+     function subtrair() {
+         var tn1 = window.document.getElementById('txtn1') // os dois tipos funcionam da mesma forma, esse linka pelo id
+         var tn2 = window.document.querySelector('input#txtn2') // esse linka via 'css', digamos assim.
+         var res = window.document.getElementById('resultado')
+         var n1 = Number(tn1.value)
+         var n2 = Number(tn2.value)
+         var s = n1 - n2
+         res.innerHTML = 'A subtração entre ' + n1 + ' e ' + n2 + ' é igual a ' + s
+     }
+       // Função de Multiplicação
+     function multiplicar() {
+         var tn1 = window.document.getElementById('txtn1') // os dois tipos funcionam da mesma forma, esse linka pelo id
+         var tn2 = window.document.querySelector('input#txtn2') // esse linka via 'css', digamos assim.
+         var res = window.document.getElementById('resultado')
+         var n1 = Number(tn1.value)
+         var n2 = Number(tn2.value)
+         var s = n1 * n2
+         res.innerHTML = 'A multiplicação entre ' + n1 + ' e ' + n2 + ' é igual a ' + s
+     }
+       // Função de Divisão
+     function dividir() {
+         var tn1 = window.document.getElementById('txtn1') // os dois tipos funcionam da mesma forma, esse linka pelo id
+         var tn2 = window.document.querySelector('input#txtn2') // esse linka via 'css', digamos assim.
+         var res = window.document.getElementById('resultado')
+         var n1 = Number(tn1.value)
+         var n2 = Number(tn2.value)
+         var s = n1 / n2
+         res.innerHTML = 'A divisão entre ' + n1 + ' e ' + n2 + ' é igual a ' + s
+     }
+ </script>
+</body>
+</html>

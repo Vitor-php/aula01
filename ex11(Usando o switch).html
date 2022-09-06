@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia da semana</title>
+</head>
+<body>
+    <h1>Digite o código do dia da semana!</h1>
+    0 - Domingo  1- Segunda-Feira 2 - Terça-Feira 3- Quarta-Feira <br>
+    4 - Quinta-Feira 5 - Sexta-Feira 6 - Sabádo 
+    <br>
+    <input type="number" name="dia_semana" id="dia_semana">
+        <input type="button" value="Verificar" onclick="verificar()">
+        <div id="resultado"></div>
+        <script>
+        function verificar(){
+            var semana = window.document.getElementById('dia_semana')
+            var diaSemana = Number(semana.value)
+            var resultado = window.document.getElementById('resultado')
+            
+        }
+
+        switch(diaSemana) {
+              case 0: 
+              resultado.innerHTML = "Hoje é Domingo"
+              break
+              case 1: 
+              resultado.innerHTML = "Hoje é Segunda"
+              break
+              case 2: 
+              resultado.innerHTML = "Hoje é Terça"
+              break
+              case 3: 
+              resultado.innerHTML = "Hoje é Quarta"
+              break
+              case 4: 
+              resultado.innerHTML = "Hoje é Quinta"
+              break
+              case 5: 
+              resultado.innerHTML = "Hoje é Sexta"
+              break
+              case 6: 
+              resultado.innerHTML = "Hoje é Sabádo"
+              break
+              // só usamos o switch em casos pontuais, como esse, quando a varias opções, mas quando queremos um intervalo por exemplo: se o numero for de 0 a 10, de tal coisa, só podemos fazer isso com o if e else!
+
+              default:
+                  resultado.innertext = 'ERRO, DATA INVÁLIDA'
+                  break
+        }
+    </script>
+</body>
+</html>
